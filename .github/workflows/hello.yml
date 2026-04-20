@@ -2,9 +2,19 @@ name: My first workflow
 
 on: push
 
+# jobs:
+ # say-hello:
+ #   runs-on: ubuntu-latest
+  #  steps:
+  #    - name: print message
+  #      run: echo "Hello"
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: print message
-        run: echo "Hello"
+      - name: Checkout code # clone repo
+        uses: actions/checkout@v4
+
+      - name: list files
+        run: ls
