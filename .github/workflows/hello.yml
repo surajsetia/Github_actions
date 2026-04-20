@@ -3,11 +3,12 @@ name: My first workflow
 on: push
 
 # jobs:
- # say-hello:
- #   runs-on: ubuntu-latest
-  #  steps:
-  #    - name: print message
-  #      run: echo "Hello"
+#   say-hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: print message
+#         run: echo "Hello"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,5 +17,13 @@ jobs:
       - name: Checkout code # clone repo
         uses: actions/checkout@v4
 
-      - name: list files
-        run: ls 
+      # - name: list files
+      #   run: ls
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Check Node version
+        run: node -v
