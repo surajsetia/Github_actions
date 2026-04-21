@@ -1,6 +1,6 @@
-name: My first workflow
+#name: My first workflow
 
-on: push
+#on: push
 
 # jobs:
 #   say-hello:
@@ -9,21 +9,47 @@ on: push
 #       - name: print message
 #         run: echo "Hello"
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
+#jobs:
+  #test:
+   # runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code # clone repo
-        uses: actions/checkout@v4
+    #steps:
+      #- name: Checkout code # clone repo
+       # uses: actions/checkout@v4
 
       # - name: list files
       #   run: ls
 
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+     # - name: Setup node
+      #  uses: actions/setup-node@v4
+      #  with:
+       #   node-version: 18
 
-      - name: Check Node version
-        run: node -v
+     # - name: Check Node version
+     #   run: node -v
+  
+name: My first workflow
+
+on: pull_request
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "hello"
+
+      - name: Print message
+        run: echo "hellooo"
+
+  say-bye:
+    needs: say-hello
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: echo "bye"
+
+      - name: Print message
+        run: echo "byeee"
