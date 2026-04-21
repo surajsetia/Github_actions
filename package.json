@@ -1,0 +1,26 @@
+{
+  "name": "github_actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Running test\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surajsetia/Github_actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/surajsetia/Github_actions/issues"
+  },
+  "homepage": "https://github.com/surajsetia/Github_actions#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "eslint": "^10.2.1",
+    "express": "^5.2.1"
+  }
+}
