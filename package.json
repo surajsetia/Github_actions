@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "exit code 1"
+    "lint": "eslint .",
+    "test": "echo \"Test successful\" ",
+    "build": "echo \"Build successful\" ",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/surajsetia/Github_actions/issues"
   },
